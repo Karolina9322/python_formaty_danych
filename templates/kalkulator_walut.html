@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Kalkulator walut</title>
+  </head>
+  <body>  
+
+ <div class="container">
+    <button type="button" class="btn btn-success btn-lg mt-4">Kalkulator walut</button>
+    <br>
+    <form action="/" method="POST">
+        <select class="form-select-sm my-3" aria-label="Default select example" name="currency" id="currency" >
+            <option selected>Posiadam walutę</option>
+            <option value="THB">THB - bat (Tajlandia)</option>
+            <option value="USD">USD - dolar amerykański</option>
+            <option value="AUD">AUD - dolar australijski</option>
+            <option value="HKD">HKD - dolar Hongkongu</option>
+            <option value="CAD">CAD - dolar kanadyjski</option>
+            <option value="NZD">NZD - dolar nowozelandzki</option>
+            <option value="SGD">SGD - dolar singapurski</option>
+            <option value="EUR">EUR - euro</option>
+            <option value="HUF">HUF - forint (Węgry) - </option>
+            <option value="CHF">CHF - frank szwajcarski</option>
+            <option value="GBP">GBP - funt szterling</option>
+            <option value="UAH">UAH - hrywna (Ukraina)</option>
+            <option value="JPY">JPY - jen (Japonia)</option>
+            <option value="CZK">CZK - korona czeska</option>
+            <option value="DKK">DKK - korona duńska</option>
+            <option value="ISK">ISK - korona islandzka</option>
+            <option value="NOK">NOK - korona norweska</option>
+            <option value="text">SEK - korona szwedzka</option>
+            <option value="HRK">HRK -  kuna (Chorwacja)</option>
+            <option value="RON">RON - lej rumuński</option>
+            <option value="BGN">BGN - lew (Bułgaria)</option>
+            <option value="TRY">TRY - lira turecka</option>
+            <option value="ILS">ILS - nowy izraelski szekel</option>
+            <option value="CLP">CLP - peso chilijskie</option>
+            <option value="PHP">PHP - peso filipińskie</option>
+            <option value="MXN">MXN - peso meksykańskie</option>
+            <option value="ZAR">ZAR - rand (Republika Południowej Afryki)</option>
+            <option value="BRL">BRL - real (Brazylia)</option>
+            <option value="MYR">MYR - ringgit (Malezja)</option>
+            <option value="IDR">IDR - rupia indonezyjska</option>
+            <option value="INR">INR - rupia indyjska</option>
+            <option value="KRW">KRW -  won południowokoreański</option>
+            <option value="CNY">CNY - yuan renminbi (Chiny)</option>
+            <option value="XDR">XDR - SDR (MFW)</option> 
+          </select>
+        
+          <input type="number" step="0.01" class="my-3" id="quantity" placeholder="ilość waluty" name="quantity">
+       
+          <button type="submit" class="btn btn-success">Przelicz</button>
+    </form>
+  <h6> {{quantity}} {{currency}} = {{ resultPLN }} PLN, według średniego kursu NBP z dn. {{current_date}}</h6>
+ </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  </body>
+</html>
